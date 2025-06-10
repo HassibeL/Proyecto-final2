@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  
+
+ 
+</head>
+<body>
+  <audio id="cancion" src="meandyou.mp3"></audio>
+  <!-- El canvas cubre toda la pantalla -->
+  <canvas class="webgl"></canvas>
+
+  <div id="welcomePopup" class="popup">
+  <div class="popup-content">
+    <h2>Holaaa!</h2>
+    <p>Da clic en el botón para conocer más sobre nosotras </p>
+    <button id="closePopup">Daleeee</button>
+  </div>
+</div>
+
+
+  <!-- Overlay encima del canvas -->
+<div class="overlay">  
+  <div id="content1" class="sidebar">
+    <header>
+    <h1>CUARTO 1</h1>
+    </header>
+    <h2>Hassibe LS</h2>
+    <h3>Billie's wife</h3>
+    <ul>
+      <li>20 años | Piscis de Febrero </li>
+      <li>Estudiante | CENTRO.</li>
+      <li>Computación creativa </li>
+      <li>Colores fav: Azul, morado y negro</li>
+      <li>Amante de los mapaches</li>
+    </ul>
+    <!-- <button id="sendLetter1">Enviar carta</button> -->
+  </div>
+
+  <div id="content3" class="sidebar">
+    <header>
+    <h1>CUARTO 2</h1>
+    </header>
+    <h2>Valerie VP</h2>
+    <h3>Suga's wife</h3>
+    <ul>
+      <li>20 años | Piscis de Marzo </li>
+      <li>Estudiante | Drake University</li>
+      <li>Ley, política y sociedad</li>
+      <li>Colores fav: Palo de rosa, vino y beige </li>
+      <li>Amante de los chihuahuas</li>
+    </ul>
+    <!-- <button id="sendLetter3">Enviar carta</button> -->
+  </div>
+
+  <div class="action-buttons">
+    <button id="btn1">Ver cuarto 1</button>
+    <button id="btn2">Regresar cámara</button>
+    <button id="btn3">Ver cuarto 2</button>
+  </div>
+  </div>
+
+  
+
+  <div class="music-controls">
+  <button id="playMusic">P/Play</button>
+  <button id="pauseMusic">S/Stop</button>
+  <button id="muteMusic">M/Mute</button>
+  </div>
+
+  <header id="overlay-header">
+  <h1>Hass y Val</h1>
+  </header>
+
+  <div id="Overlay" class="info-overlay">
+  <h2>Bienvenidx a este pequeño espacio</h2>
+  <p>Aquí puedes ver cómo las cartas vuelan entre mundos.</p>
+  <p class="instrucciones"><strong>Instrucciones:</strong> Mantén presionada la tecla "H" y desliza con el scroll para ayudarnos a interactuar por medio de fotos.
+  
+  Puedes mover la cámara con el clic izquierdo, hacer zoom con el scroll y usar el clic derecho para desplazarte.
+  Haz clic en los botones para entrar a cada cuarto y descubrir sus detalles.</p>
+  </div>
+
+
+
+  <script type="module" src="./script.js"></script>
+   <script>
+  const music = document.getElementById('cancion');
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() === 'm') {
+      music.play();
+    }
+  });
+  </script>
+
+
+</body>
+</html>
